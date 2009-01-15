@@ -24,7 +24,7 @@ THANKS FOR THE TUPLES
 The typles are supplied by the com.mallardsoft.tuple library written by
 Michael L Perry.
 
-http://javatuple.com/
+    http://javatuple.com/
 
 This library is succinct and its design encouraged me to find a solution
 to partial comparison that favored immutability.

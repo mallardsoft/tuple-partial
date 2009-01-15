@@ -19,18 +19,19 @@ public class PartialTest
         Partial<Triple<String, Integer, File>, Pair<String, Integer>> twoOfTriple
             = Partial.twoOf(Partial.<String, Integer, File>triple());
         
-        Comparable<Triple<String, Integer, File>> compare = twoOfTriple.compare(Tuple.from("A", 2));
-        assertEquals((int) compare.compareTo(Tuple.from("A", 1, new File("A"))), 1);
+        Comparable<Triple<String, Integer, File>> compare = twoOfTriple.compare(Tuple.from("A", 1));
+        assertEquals((int) compare.compareTo(Tuple.from("A", 1, new File("A"))), 0);
     }
     
     @Test
     public void reversed()
     {
-        Partial
-            .<Character>ignore()
-            .<Integer>shared()
-            .<String>shared()
-                  .comparable(Tuple.from("A", 1))
-                  .compareTo(Tuple.from("A", 1 , 'A'));
+        int compare = Partial
+                        .<Character>ignore()
+                        .<Integer>shared()
+                        .<String>shared()
+                            .comparable(Tuple.from("A", 1))
+                            .compareTo(Tuple.from("A", 1 , 'A'));
+        assertEquals(compare, 0);
     }
 }
