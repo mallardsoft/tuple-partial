@@ -2,7 +2,7 @@ TUPLE PARTIAL
 
 Partially compare lesser Java Tuple tuples against greater tuples.
 
-    Issues and Tasks: http://blogometer.com/trac/incubator
+    Issues and Tasks: http://curlybraces.org/trac/incubator
     Source: http://github.com/bigeasy/tuple-partial/tree/master
     Contact: alan@blogometer.com
     See Also: http://javatuple.com/
