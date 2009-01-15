@@ -1,0 +1,40 @@
+TUPLE PARTIAL
+
+Partially compare lesser Java Tuple tuples against greater tuples.
+
+    Issues and Tasks: http://blogometer.com/trac/incubator
+    Source: http://github.com/bigeasy/tuple-partial/tree/master
+    Contact: alan@blogometer.com
+    See Also: http://javatuple.com/
+
+PURPOSE
+
+Provides a factory for creating Comparable implementations that
+contain a tuple and compare the fields in that tuple against a tuple
+that has a greater number of fields. The parital tuple has idenditical
+types as the parallel fields in the full tuple. The comparison between
+the parital tuple and the full tuple is type safe.
+
+THANKS FOR THE TUPLES
+
+The typles are supplied by the com.mallardsoft.tuple library written by
+Michael L Perry.
+
+http://javatuple.com/
+
+This library is succinct and its design encouraged me to find a solution
+to partial comparison that favored immutability.
+
+MOTIVATION
+
+This library was developed to create a type safe implementation of of
+searches against indexes in an object database, where partial searches
+are commonly desired. For example, if you index a person object by last
+name then first name, you may then want to take advantage of the
+ordering to use the compound index to search using only a last name. You
+would simply ignore the first name when searching the index.
+
+In Java 1.4 I'd simply used an array of Comparable instances to represent
+tuples. Anticipating criticism over type safety in Java 1.5, I sought a
+type safe solution. This has been an exercise in finding the limits of
+Java's generics mechanism.
