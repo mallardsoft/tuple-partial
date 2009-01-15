@@ -15,6 +15,10 @@ that has a greater number of fields. The parital tuple has idenditical
 types as the parallel fields in the full tuple. The comparison between
 the parital tuple and the full tuple is type safe.
 
+EXAMPLE
+
+    http://tr.im/7kdl
+
 THANKS FOR THE TUPLES
 
 The typles are supplied by the com.mallardsoft.tuple library written by
