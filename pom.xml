@@ -141,7 +141,16 @@
                 <reportSet>
                     <id>html</id>
                     <configuration>
-                        <show>private</show>
+                        <offlineLinks>
+                            <offlineLink>
+                                <url>http://java.sun.com/j2se/1.5.0/docs/api/</url>
+                                <location>etc/javadoc/jdk-5.0/</location>
+                            </offlineLink>
+                            <offlineLink>
+                                <url>http://curlybraces.org/documentation/tuple/apidocs/</url>
+                                <location>etc/javadoc/tuple/</location>
+                            </offlineLink>
+                        </offlineLinks>
                     </configuration>
                     <reports>
                         <report>javadoc</report>

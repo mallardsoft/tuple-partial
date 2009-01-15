@@ -6,6 +6,7 @@ import java.io.File;
 
 import org.testng.annotations.Test;
 
+import com.goodworkalan.tuple.partial.Compare;
 import com.goodworkalan.tuple.partial.Partial;
 import com.mallardsoft.tuple.Pair;
 import com.mallardsoft.tuple.Triple;
@@ -17,7 +18,7 @@ public class PartialTest
     public void bucketed()
     {   
         Partial<Triple<String, Integer, File>, Pair<String, Integer>> twoOfTriple
-            = Partial.twoOf(Partial.<String, Integer, File>triple());
+            = Compare.twoOf(Compare.<String, Integer, File>triple());
         
         Comparable<Triple<String, Integer, File>> compare = twoOfTriple.compare(Tuple.from("A", 1));
         assertEquals((int) compare.compareTo(Tuple.from("A", 1, new File("A"))), 0);
@@ -26,7 +27,7 @@ public class PartialTest
     @Test
     public void reversed()
     {
-        int compare = Partial
+        int compare = Compare
                         .<Character>ignore()
                         .<Integer>shared()
                         .<String>shared()
